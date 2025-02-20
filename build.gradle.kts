@@ -3,6 +3,19 @@
 import com.jfrog.bintray.gradle.BintrayExtension
 import com.jfrog.bintray.gradle.tasks.BintrayUploadTask
 
+buildscript {
+
+    repositories {
+        google()
+        mavenCentral()
+        //gradlePluginPortal() // Warning: this repository is going to shut down soon
+        maven(url = "https://kotlin.bintray.com/ktor")
+        maven(url = "https://jitpack.io")
+        maven(url = "https://nexus.web.cern.ch/nexus/content/repositories/public/")
+    }
+
+}
+
 plugins {
     kotlin("multiplatform")
     `maven-publish`
@@ -10,16 +23,30 @@ plugins {
 }
 
 group = "com.github.lamba92"
-version = `travis-tag` ?: "1.0"
+version = `travis-tag` ?: "1.2.1"
 
 repositories {
-    jcenter()
+    google()
+    mavenCentral()
+    //gradlePluginPortal() // Warning: this repository is going to shut down soon
     maven(url = "https://kotlin.bintray.com/ktor")
     maven(url = "https://jitpack.io")
+    maven(url = "https://nexus.web.cern.ch/nexus/content/repositories/public/")
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        //gradlePluginPortal() // Warning: this repository is going to shut down soon
+        maven(url = "https://kotlin.bintray.com/ktor")
+        maven(url = "https://jitpack.io")
+        maven(url = "https://nexus.web.cern.ch/nexus/content/repositories/public/") 
+    }
 }
 
 kotlin {
-
+ 
     jvm {
         compilations.all {
             kotlinOptions.jvmTarget = "1.8"
@@ -63,7 +90,7 @@ bintray {
     setPublications(*publishing.publications.names.toTypedArray())
 }
 
-tasks.withType<BintrayUploadTask> {
+/* tasks.withType<BintrayUploadTask> {
     doFirst {
         publishing.publications.withType<MavenPublication> {
             buildDir.resolve("publications/$name/module.json").let {
@@ -74,7 +101,7 @@ tasks.withType<BintrayUploadTask> {
             }
         }
     }
-}
+} */
 
 fun BintrayExtension.pkg(action: BintrayExtension.PackageConfig.() -> Unit) {
     pkg(closureOf(action))
