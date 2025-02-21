@@ -3,6 +3,15 @@ Installable feature to handle SPAs easily in Ktor!
 
 Written in Kotlin with ❤️
 
+## Building
+
+This was forked entirely because I inherited a project that depended on this library, but it's not in maven repositories anywhere.
+
+To stick it in your local repository, `./gradlew publishKotlinMultiplatformPublicationToMavenLocal`.
+
+To use it in your project, include `mavenLocal()` in your `build.gradle` file under `buildscript.repositories` and `allprojects.repositories`.
+
+
 ## Usage
 
 Just install the feature in your application with:
