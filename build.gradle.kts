@@ -1,12 +1,9 @@
-@file:Suppress("UNUSED_VARIABLE")
-
 buildscript {
 
     repositories {
         google()
         mavenCentral()
         //gradlePluginPortal() // Warning: this repository is going to shut down soon
-        maven(url = "https://kotlin.bintray.com/ktor")
         maven(url = "https://jitpack.io")
         maven(url = "https://repo.grails.org/grails/core/")
     }
@@ -16,7 +13,6 @@ buildscript {
 plugins {
     kotlin("multiplatform")
     `maven-publish`
-    id("com.jfrog.bintray")
 }
 
 group = "com.github.lamba92"
@@ -26,7 +22,6 @@ repositories {
     google()
     mavenCentral()
     //gradlePluginPortal() // Warning: this repository is going to shut down soon
-    maven(url = "https://kotlin.bintray.com/ktor")
     maven(url = "https://jitpack.io")
     maven(url = "https://repo.grails.org/grails/core/")
 }
@@ -36,7 +31,6 @@ allprojects {
         google()
         mavenCentral()
         //gradlePluginPortal() // Warning: this repository is going to shut down soon
-        maven(url = "https://kotlin.bintray.com/ktor")
         maven(url = "https://jitpack.io")
         maven(url = "https://repo.grails.org/grails/core/")
     }
