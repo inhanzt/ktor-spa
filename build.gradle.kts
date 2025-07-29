@@ -11,7 +11,7 @@ buildscript {
         //gradlePluginPortal() // Warning: this repository is going to shut down soon
         maven(url = "https://kotlin.bintray.com/ktor")
         maven(url = "https://jitpack.io")
-        maven(url = "https://nexus.web.cern.ch/nexus/content/repositories/public/")
+        maven(url = "https://repo.grails.org/grails/core/")
     }
 
 }
@@ -31,7 +31,7 @@ repositories {
     //gradlePluginPortal() // Warning: this repository is going to shut down soon
     maven(url = "https://kotlin.bintray.com/ktor")
     maven(url = "https://jitpack.io")
-    maven(url = "https://nexus.web.cern.ch/nexus/content/repositories/public/")
+    maven(url = "https://repo.grails.org/grails/core/")
 }
 
 allprojects {
@@ -41,7 +41,7 @@ allprojects {
         //gradlePluginPortal() // Warning: this repository is going to shut down soon
         maven(url = "https://kotlin.bintray.com/ktor")
         maven(url = "https://jitpack.io")
-        maven(url = "https://nexus.web.cern.ch/nexus/content/repositories/public/") 
+        maven(url = "https://repo.grails.org/grails/core/")
     }
 }
 
