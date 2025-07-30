@@ -54,7 +54,6 @@ kotlin {
         val jvmTest by getting {
             dependencies {
                 implementation("io.ktor:ktor-server-tests:$ktorVersion")
-                implementation("com.github.lamba92:kresourceloader:$resourceLoaderVersion")
             }
         }
     }

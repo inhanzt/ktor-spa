@@ -10,10 +10,10 @@ import io.ktor.server.testing.TestApplicationCall
 import io.ktor.server.testing.TestApplicationEngine
 import io.ktor.server.testing.handleRequest
 import io.ktor.server.testing.withTestApplication
-import it.lamba.utils.getResource
 import org.junit.Test
 import org.slf4j.event.Level
 import kotlin.test.assertEquals
+import java.io.File
 
 class Tests {
 
@@ -32,6 +32,21 @@ class Tests {
                 level = Level.DEBUG
             }
         }, test)
+
+    /**
+    * Retrieves a resource from the given class loader or default one.
+    * @param name The relative path of the resource.
+    * @param classLoader The classloader from which load the resource.
+    * @param file The file where the resource should be places.
+    * @return The [file] with the resource.
+    */
+    @JvmOverloads
+    private fun getResource(name: String,
+                    file: File = createTempFile().apply { deleteOnExit() },
+                    classLoader: ClassLoader = Thread.currentThread().contextClassLoader
+    ) = classLoader.getResourceAsStream(name)!!.let {
+        file.apply { writeBytes(it.readBytes()) }
+    }
 
     private fun defaultTest(url: String = "/", tests: TestApplicationCall.() -> Unit) =
         withSPATestApplication {
