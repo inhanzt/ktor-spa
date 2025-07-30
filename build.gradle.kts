@@ -3,7 +3,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        //gradlePluginPortal() // Warning: this repository is going to shut down soon
         maven(url = "https://jitpack.io")
         maven(url = "https://repo.grails.org/grails/core/")
     }
@@ -16,12 +15,10 @@ plugins {
 }
 
 group = "com.github.lamba92"
-version = `travis-tag` ?: "1.2.1"
 
 repositories {
     google()
     mavenCentral()
-    //gradlePluginPortal() // Warning: this repository is going to shut down soon
     maven(url = "https://jitpack.io")
     maven(url = "https://repo.grails.org/grails/core/")
 }
@@ -30,7 +27,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        //gradlePluginPortal() // Warning: this repository is going to shut down soon
         maven(url = "https://jitpack.io")
         maven(url = "https://repo.grails.org/grails/core/")
     }
@@ -64,24 +60,3 @@ kotlin {
     }
 }
 
-fun searchPropertyOrNull(name: String, vararg aliases: String): String? {
-
-    fun searchEverywhere(name: String): String? =
-        findProperty(name) as? String? ?: System.getenv(name)
-
-    searchEverywhere(name)?.let { return it }
-
-    with(aliases.iterator()) {
-        while (hasNext()) {
-            searchEverywhere(next())?.let { return it }
-        }
-    }
-
-    return null
-}
-
-@Suppress("PropertyName")
-val `travis-tag`
-    get() = System.getenv("TRAVIS_TAG").run {
-        if (isNullOrBlank()) null else this
-    }

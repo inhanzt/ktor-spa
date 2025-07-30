@@ -7,3 +7,5 @@
 *.iws
 tomcat.8080/
 /.gitlab-ci-local
+/.vscode
+/.vscode-test

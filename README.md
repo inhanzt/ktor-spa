@@ -1,5 +1,4 @@
-# Ktor Single Page Application Feature [![Build Status](https://travis-ci.org/lamba92/ktor-spa.svg?branch=master)](https://travis-ci.org/lamba92/ktor-spa) [ ![Download](https://api.bintray.com/packages/lamba92/com.github.lamba92/ktor-spa/images/download.svg) ](https://bintray.com/lamba92/com.github.lamba92/ktor-spa/_latestVersion)
-Installable feature to handle SPAs easily in Ktor!
+# Ktor Single Page Application 
 
 Written in Kotlin with ❤️
 
