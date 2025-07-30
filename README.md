@@ -66,3 +66,8 @@ dependencies {
     implementation("com.github.inhanzt", "ktor-spa", "{latest_version}")
 }
 ```
+
+## Generate Publishable build.
+```sh
+find . -type f -exec bash -c 'md5sum {} | cut -d " " -f 1 > {}.md5 && sha1sum {} | cut -d " " -f 1 > {}.sha1 && gpg -ba {}' \;
+```

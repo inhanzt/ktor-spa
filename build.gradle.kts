@@ -3,12 +3,12 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.inhanzt"
+group = "io.github.inhanzt"
+version = "1.0.0"
 
 repositories {
     google()
     mavenCentral()
-    maven(url = "https://repo.grails.org/grails/core/")
 }
 
 kotlin {
