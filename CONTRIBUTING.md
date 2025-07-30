@@ -1,2 +1,0 @@
-- [Lamba92](https://github.com/lamba92)
-- [voxtex](https://github.com/voxtex)
