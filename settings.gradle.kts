@@ -2,14 +2,11 @@ pluginManagement {
     resolutionStrategy {
 
         val kotlinVersion: String by settings
-        val bintrayPublishPlugin: String by settings
 
         eachPlugin {
             when (requested.id.id) {
                 "org.jetbrains.kotlin.jvm", "org.jetbrains.kotlin.multiplatform" ->
                     useVersion(kotlinVersion)
-                "com.jfrog.bintray" ->
-                    useVersion(bintrayPublishPlugin)
             }
         }
     }
