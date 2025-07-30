@@ -3,7 +3,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://jitpack.io")
         maven(url = "https://repo.grails.org/grails/core/")
     }
 
@@ -19,7 +18,6 @@ group = "com.github.lamba92"
 repositories {
     google()
     mavenCentral()
-    maven(url = "https://jitpack.io")
     maven(url = "https://repo.grails.org/grails/core/")
 }
 
@@ -27,7 +25,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://jitpack.io")
         maven(url = "https://repo.grails.org/grails/core/")
     }
 }
