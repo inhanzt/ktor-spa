@@ -1,4 +1,4 @@
-package com.github.lamba92.ktor.features
+package com.github.inhanzt.ktor.features
 
 import io.ktor.application.install
 import io.ktor.features.CallLogging

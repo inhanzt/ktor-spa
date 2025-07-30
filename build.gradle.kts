@@ -1,32 +1,14 @@
-buildscript {
-
-    repositories {
-        google()
-        mavenCentral()
-        maven(url = "https://repo.grails.org/grails/core/")
-    }
-
-}
-
 plugins {
     kotlin("multiplatform")
     `maven-publish`
 }
 
-group = "com.github.lamba92"
+group = "com.github.inhanzt"
 
 repositories {
     google()
     mavenCentral()
     maven(url = "https://repo.grails.org/grails/core/")
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven(url = "https://repo.grails.org/grails/core/")
-    }
 }
 
 kotlin {

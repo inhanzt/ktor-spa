@@ -63,6 +63,6 @@ repositories {
 }
 ...
 dependencies {
-    implementation("com.github.lamba92", "ktor-spa", "{latest_version}")
+    implementation("com.github.inhanzt", "ktor-spa", "{latest_version}")
 }
 ```
