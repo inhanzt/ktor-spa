@@ -54,7 +54,7 @@ The feature intercepts all 404s not intercepted by the router and instead of res
 
 **NB**: Remember to setup a 404 in your spa!
 
-## Install [ ![Download](https://api.bintray.com/packages/lamba92/com.github.lamba92/ktor-spa/images/download.svg) ](https://bintray.com/lamba92/com.github.lamba92/ktor-spa/_latestVersion)
+## Install
 
 If using Gradle Kotlin DSL:
 ```kotlin

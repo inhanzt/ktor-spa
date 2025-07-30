@@ -90,7 +90,7 @@ publish:
   needs: [debugTests]
   stage: deploy
   script:
-    - ./gradlew -Pci --console=plain bintrayUpload
+    - ./gradlew -Pci --console=plain publish
   only:
     - master
     - tags
